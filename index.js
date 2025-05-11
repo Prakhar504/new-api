@@ -59,9 +59,12 @@ app.post('/bfhl', (req, res) => {
   res.json(response);
 });
 
-// For the root route (optional, but helpful for testing)
-app.get('/', (req, res) => {
-  res.send('Welcome to the BFHL API. Use POST /bfhl to interact with the API.');
+app.get('/bfhl', (req, res) => {
+  res.json({
+    is_success: true,
+    user_id: "john_doe_17091999",
+    operation_code: 1
+  });
 });
 
 // For Vercel deployment, we need to export the app
