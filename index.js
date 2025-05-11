@@ -5,7 +5,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // POST endpoint
-app.post('/bfhl', (req, res) => {
+app.post('/', (req, res) => {
   const user_id = "Prakhar Jain 0827CY221043";
   
   try {
@@ -36,7 +36,7 @@ app.post('/bfhl', (req, res) => {
 });
 
 // GET endpoint
-app.get('/bfhl', (req, res) => {
+app.get('/', (req, res) => {
   res.json({
     is_success: true,
     user_id: "Prakhar Jain 0827CY221043",
